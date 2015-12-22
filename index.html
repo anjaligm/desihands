@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="css/style.css" rel="stylesheet">
+     <!-- bxSlider CSS file -->
+<link href="jquery.bxslider.css" rel="stylesheet" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,47 +22,45 @@
     <![endif]-->
   </head>
   <body>
-    <section class="hero-main">
-     <div class="container-fluid">
-       <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 home hidden-div">
-           <div class="inner-div btn-link btn btn-default style-button">
-             <a href="#">DISCOVER YOUR STYLE</a>
-           </div>
-         </div>
-       </div>
-     </div> 
-    </section>
-    <section class="brand-container">
-      <div class="container">
+  <section class="brand-container">
+      <div class="container-fluid">
         <div class="row">
-        <div class="colxs-12 col-sm-12 col-md-12 main-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 main-container">
         <div class="logo_search_container">
-          <div class="col-hidden-xs col-sm-4 col-md-4 col-lg-4 empty"></div>
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 logo-container">
+          <div class="col-hidden-xs col-sm-4 col-md-4 col-lg-4 home-shop">
+            <ul>
+              <li><a href="#"><span class="glyphicon glyphicon-home"></span>home</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>shop</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-star"></span>featured</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 logo-container">
             <div class="logo">
               <img src="images/logo.png" alt="logo">
             </div>
           </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 search-container pull-right">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 search-container pull-right">
               <!-- <div class="shopping-cart">
                 <a href="#">shopping cart inr 0.00 </a>
               </div> -->
-              <div class="login-section">
-                <a href="#">sign up<span class="glyphicon glyphicon-user"></span></a>
-                <a href="#">my cart</a>
-                <!-- <a href="#">checkout</a> -->
-                <a href="#">login</a>
-              </div>
+              
               <div class="search-section">
                 <form class="search-product" name="search" action="#">
-                  <div class="input-group">
-            <input type="text" class="form-control search" placeholder="Search" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
+                  <div class="form-group inner-addon left-addon">
+                  <i class="glyphicon glyphicon-search"></i>
+            <input type="text" class="form-control search-master" placeholder="Search" name="srch-term" id="srch-term">
+            <!-- <div class="input-group-btn">
                 <button class="btn btn-default search-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
+            </div> -->
             </div>
                 </form>
+              </div>
+              <div class="login-section">
+              <a href="#">log in</a>
+                <a href="#" id="sign_up">join<span class="glyphicon glyphicon-user"></span></a>
+                <a href="#">my cart</a>
+                <!-- <a href="#">checkout</a> -->
+                
               </div>
             </div>
             </div>
@@ -419,6 +419,24 @@
         </div>
       </div>
     </section>
+    <section class="hero-main">
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 home hidden-div">
+           <!-- <div class="inner-div btn-link btn btn-default style-button">
+             <a href="#">DISCOVER YOUR STYLE</a>
+           </div> -->
+           <ul class="bxslider">
+  <li><img src="images/main.jpg" /></li>
+  <li><img src="images/main.jpg" /></li>
+  <li><img src="images/main.jpg" /></li>
+  <li><img src="images/main.jpg" /></li>
+</ul>
+         </div>
+       </div>
+     </div> 
+    </section>
+    
     <section class="grid-section">
     <div class="container">
     <div class="row">
@@ -762,7 +780,7 @@
         <img src="images/lar2.jpg">
       </div>
     </div>
-    <div class="row">
+    <div class="row no-margin-side">
        <div class="col-md-12 grid-head">
          <h3>FEATURED PRODUCTS</h3>
        </div>
@@ -946,7 +964,7 @@
           <img src="images/lar14.jpg">
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 sec-larr">
         <img src="images/lar15.jpg">
       </div>
     </div>
@@ -1045,5 +1063,17 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- bxSlider Javascript file -->
+
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+  jQuery('.bxslider').bxSlider({
+     auto: true,
+     pager:false
+
+  });
+});
+</script>
   </body>
 </html>
