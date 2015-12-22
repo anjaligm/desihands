@@ -629,13 +629,20 @@ ul.menu li{
 	width: 215px;
     height: 527px;
 }
-
+}
 @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) { 
+
+		
 .home {
     position: relative;
-    background: url(../images/main.jpg) no-repeat;
-    height: 60vh;
-    background-size: 90% 100%;
+    
+}
+.home .bx-wrapper, .home .bx-viewport{
+max-height:370px;
+}
+.grid-head{
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .home-shop li span{
 	padding-right: 0;
@@ -658,9 +665,37 @@ ul.menu li{
 .brand-container > .container{
 	padding: 0;
 }
+.home-shop ul{
+	padding-left: 10px;
 }
-@media only screen and (min-width : 320px) and (max-width : 767px){
-	.home{
+.home-shop ul li{
+	margin-right: 15px;
+}
+.home-shop ul li span{
+	padding-right: 5px;
+}
+.logo img{
+	width:100%;
+	margin-top: 12px;
+}
+.login-section{
+	clear:both;
+	text-align: left;
+	
+}
+.search-container{
+	padding-left:0;
+	padding-right: 0;
+}
+ul.menu li{
+	font-size: 0.7em;
+}
+.menu-container{
+	padding-top: 110px;
+}
+}
+/*@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : landscape) {
+.home{
 		display: none;
 	}
 .inner-div{
@@ -709,27 +744,16 @@ ul.menu li{
 .dropdown-menu{
 	margin-top: 6px;
 }
+.product-container .canopy{
+	width:400px;
+	height:300px;
+	margin-left: 12%;
+}
 
 }
 
-@media only screen and (min-width : 320px) and (max-width : 767px) and (orientation:portrait){
-	.logo img{
-		width:100%;
-		height:auto;
-	}
-	.input-group{
-		width:100%;
-		padding-left: 0;
-	}
-	.login-section a{
-		width:49%;
-		float: left;
-		text-align: left;
-		margin-bottom: 5px;
-		border-right: none;
-	}
-	.shopping-cart{
-		text-align: left;
-	}
+@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : portrait) {
+	
 }
 
+*/
